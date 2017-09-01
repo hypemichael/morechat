@@ -1,52 +1,82 @@
 <!doctype html>
 <html>
   <head>
-    <title> chat</title>
+    <title>Welcome</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="chatstandalone.css"></link>
+	<link rel="stylesheet" href="chatindex.css"></link>
 	<script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
-<div id="chatheader">
-<div id="chatname">Roomname</div>
+<div id="indexheader"><span style="float:left;">Sigma Chat Welcome</span> <span style="float:right;">Logout &#9747;</span></div>
 
+<br>
+<button class="button">offline messages 0</button>
+<br>
+<br>
+<button class="button" onclick="showRoomModal()">Join Room</button>
+<br>
+<br>
+<button class="button" onclick="createRoom()">Create Room</button>
+<br>
+<br>
+<button class="button">One to One Chat</button>
+<br>
+<br>
+<button class="button">Manage contacts</button>
 
-<div class="dropdown" id="userdropdown" onclick="">
-  <span>Members &#9786;</span>
-  <div class="dropdown-content" id="userdropdowncontent">
-    <p class="dropdownp">Admin</p>
-  </div>
+<div id="modal" hidden>
+<span style="float:right;color:white; font-size:25px;" onclick="hideModal()">&#9747;</span>
+<div id="listdiv">
+<ul>
+<li>
+Room 1
+</li>
+<br>
+<li>
+Room 2
+</li>
+<br>
+<li>
+Room 3
+</li>
+</ul>
 </div>
-<div class="dropdown" id="optionsdropdown" onclick="">
-  <span>options &#9776;</span>
-  <div class="dropdown-content">
-    <p class="dropdownp">Add User</p>
-	 <p class="dropdownp">Delete Room</p>
-	  <p class="dropdownp">Exit Room</p>
-	  <p class="dropdownp">Logout</p>
-  </div>
-</div>
-</div>
-<div id="chatbox">
-1 member
-<ul id="ul" style="list-style-type:none"></ul>
-	</div>
-	
 
-<div class="row" id="inputbox">
-<div class="col-1"></div>
-<div class="col-8" style="height:100%;" id="inputarea">   
-<textarea id="input"></textarea>
+<div id="startchat" style="display:none;"></div>
+<div id="managecontacts" style="display:none;"></div>
 </div>
-<div class="col-2" style="height:100%;"> 
-<div id="buttondiv" class="float-class">
-<button id="sendbutton" onclick="addText()">Send</button>
-</div>
-<div class="col-1"></div>
-</div>
-   </div>
-<script src="chatstandalone.js"></script>
+<script>
+function showRoomModal(){
+document.getElementById("modal").style.display ="block";
+var button = document.getElementsByClassName("button");
+var i;
+for(i = 0; i < button.length; i++) {
+    button[i].style.opacity ="0.1";
+}
 
-   </script>   
-  </body>
+}
+
+function hideModal(){
+document.getElementById("modal").style.display ="none";
+var button = document.getElementsByClassName("button");
+var i;
+for(i = 0; i < button.length; i++) {
+    button[i].style.opacity ="1";
+}
+
+}
+
+function createRoom(){
+var roomname = prompt("Choose a room name");
+
+if(roomname == null || roomname === ""){
+
+}
+else{
+sessionStorage.roomname = roomname;
+location.replace("chatpage.html");
+}
+}
+</script>
+</body>
 </html>

@@ -1,0 +1,61 @@
+#indexheader{
+	
+	margin-top:0px;
+	width:95%;
+	margin-left:  auto ;
+	margin-right: auto ;
+	height:50px;
+}
+
+span{
+	color:white;
+		padding-top:15px;
+}
+#indexheader{
+  background: LightCyan; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, Cyan ,CornflowerBlue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,Cyan , Cornflower); /* Standard syntax */
+}
+
+button{
+	
+	width:30%;
+	height:80px;
+	border-color : cornflowerblue;
+	color: cornflowerblue;
+	background-color:white;
+	margin-left: 35%;
+	z-index :-1;
+}
+#modal{
+width:90%;
+height:400px;
+z-index : 1;	
+background-color:black;
+opacity : 0.6;
+margin : 0 auto;
+color:white;
+position:absolute;
+top:0px;
+left:5%;
+}
+
+#listdiv{
+	width:100%;
+margin-left: 35%;
+margin-top:50%;
+}
+
+@media only screen and (min-width:600px) {
+	#modal{
+	height:100%;	
+	}
+	#listdiv{
+	width:100%;
+margin-left: 35%;
+margin-top:10%;
+font-size: 30px;
+}
+}

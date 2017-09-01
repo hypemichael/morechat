@@ -1,0 +1,1 @@
+document.getElementById("chatname").innerHTML = sessionStorage.roomname;
