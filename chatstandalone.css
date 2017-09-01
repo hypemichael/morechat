@@ -169,7 +169,7 @@ background-color:none;
 	height:100%; 
 width:135%;
 font-size:16px;
-margin-left:-39px;
+margin-left:-35px;
 white-space:normal;
 border-color:cornflowerblue;
 box-shadow :inset 0px 0px 0px 0px red;
@@ -190,7 +190,7 @@ margin-top:-10px;
 #sendbutton{
 	height:100%;
 	width:300%;
-	margin-left:12px;
+	margin-left:15px;
 	background-color:cornflowerblue;
 	color:white;
 	box-shadow:none;
