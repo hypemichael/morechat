@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title> chat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="chatstandalone.css"></link>
+	<script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+<div id="chatheader">
+<div id="chatname">Roomname</div>
+
+
+<div class="dropdown" id="userdropdown">
+  <span>Members &#9786;</span>
+  <div class="dropdown-content" id="userdropdowncontent">
+    <p class="dropdownp">Admin</p>
+  </div>
+</div>
+<div class="dropdown" id="optionsdropdown">
+  <span>options &#9776;</span>
+  <div class="dropdown-content">
+    <p class="dropdownp">Add User</p>
+	 <p class="dropdownp">Delete Room</p>
+	  <p class="dropdownp">Exit Room</p>
+	  <p class="dropdownp">Logout</p>
+  </div>
+</div>
+</div>
+<div id="chatbox">
+1 member
+<ul id="ul" style="list-style-type:none"></ul>
+	</div>
+	
+
+<div class="row" id="inputbox">
+<div class="col-1"></div>
+<div class="col-8" style="height:100%;" id="inputarea">   
+<textarea id="input"></textarea>
+</div>
+<div class="col-2" style="height:100%;"> 
+<div id="buttondiv" class="float-class">
+<button id="sendbutton" onclick="addText()">Send</button>
+</div>
+<div class="col-1"></div>
+</div>
+   </div>
+<script src="chatstandalone.js"></script>
+
+   </script>   
+  </body>
+</html>

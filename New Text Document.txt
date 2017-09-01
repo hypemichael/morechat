@@ -1,7 +1,0 @@
-<html>
-<body>
-<input placeholder="username"/>
-
-<input paceholder="password"/>
-</body>
-</html>
